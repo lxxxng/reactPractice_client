@@ -24,7 +24,7 @@ function CreatePost() {
 
   const onSubmit = (data) => {
     axios.post(
-		"http://localhost:3001/posts", 
+		"https://react-practice-a75bfd5abb62.herokuapp.com/posts", 
 		data, 
 		{headers: {accessToken: localStorage.getItem('accessToken')}}
 	).then(()=> {

@@ -15,7 +15,7 @@ function Register() {
     };
     
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/auth", data)
+        axios.post("https://react-practice-a75bfd5abb62.herokuapp.com/auth", data)
         .then(() => {
             console.log("data");
             navigate("/login"); // Redirect to login page after successful registration

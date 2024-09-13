@@ -21,7 +21,7 @@ function App() {
 
   // so that when you close the webpage, if token still there can still access
   useEffect(() => {
-    axios.get("http://localhost:3001/auth/auth", {headers: {
+    axios.get("https://react-practice-a75bfd5abb62.herokuapp.com/auth/auth", {headers: {
         accessToken: localStorage.getItem("accessToken"), },
       })
         .then((response) => {

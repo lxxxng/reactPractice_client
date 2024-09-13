@@ -13,12 +13,12 @@ function Profile() {
     const { AuthState } = useContext(AuthContext); 
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/auth/basicinfo/${id}`)
+        axios.get(`https://react-practice-a75bfd5abb62.herokuapp.com/auth/basicinfo/${id}`)
         .then((response) => {
             setUsername(response.data.username);
         });
 
-        axios.get(`http://localhost:3001/posts/byuserId/${id}`)
+        axios.get(`https://react-practice-a75bfd5abb62.herokuapp.com/posts/byuserId/${id}`)
         .then((response) => {
             setlistOfPosts(response.data);
         });

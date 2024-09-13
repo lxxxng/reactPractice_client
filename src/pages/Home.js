@@ -19,7 +19,7 @@ function Home() {
     else
     {
       axios.get(
-        "http://localhost:3001/posts", 
+        "https://react-practice-a75bfd5abb62.herokuapp.com/posts", 
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       ).then((response) => {
         setListOfPosts(response.data.listOfPosts);
@@ -32,7 +32,7 @@ function Home() {
 
   const likeAPost = (PostId) => {
     axios.post(
-      "http://localhost:3001/likes", 
+      "https://react-practice-a75bfd5abb62.herokuapp.com/likes", 
       { PostId: PostId }, 
       { headers: { accessToken: localStorage.getItem("accessToken") } }
     ).then((response) => {
